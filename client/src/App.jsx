@@ -25,10 +25,15 @@ export default function App() {
     totalNeeded: 0,
     hasSubmitted: false,
     error: null,
+    availableOptions: { languages: [], expansionsByLang: {} },
   });
 
   useEffect(() => {
     socket.connect();
+
+    socket.on('room:options', (options) => {
+      setGameState((s) => ({ ...s, availableOptions: options }));
+    });
 
     // ── Room events ──────────────────────────────────────────────────────
     socket.on('room:created', (data) => {
@@ -184,7 +189,7 @@ export default function App() {
           <button onClick={clearError} style={styles.errorClose}>✕</button>
         </div>
       )}
-      {screen === 'lobby' && <LobbyScreen />}
+      {screen === 'lobby' && <LobbyScreen availableOptions={gameState.availableOptions} />}
       {screen === 'waiting' && <WaitingRoom gameState={gameState} />}
       {screen === 'game' && <GameScreen gameState={gameState} onSubmitted={markSubmitted} />}
     </div>

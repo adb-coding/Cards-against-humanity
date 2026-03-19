@@ -12,9 +12,9 @@ function generateCode() {
 }
 
 export const RoomManager = {
-  createRoom(hostId, hostName) {
+  createRoom(hostId, hostName, options) {
     const code = generateCode();
-    const room = new Room(code, hostId, hostName);
+    const room = new Room(code, hostId, hostName, options);
     rooms.set(code, room);
     return room;
   },

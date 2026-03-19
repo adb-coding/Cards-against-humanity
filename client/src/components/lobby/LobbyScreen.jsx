@@ -2,7 +2,7 @@ import { useState } from 'react';
 import CreateRoom from './CreateRoom.jsx';
 import JoinRoom from './JoinRoom.jsx';
 
-export default function LobbyScreen() {
+export default function LobbyScreen({ availableOptions }) {
   const [view, setView] = useState('home'); // home | create | join
 
   return (
@@ -21,7 +21,7 @@ export default function LobbyScreen() {
         </div>
       )}
 
-      {view === 'create' && <CreateRoom onBack={() => setView('home')} />}
+      {view === 'create' && <CreateRoom onBack={() => setView('home')} availableOptions={availableOptions} />}
       {view === 'join' && <JoinRoom onBack={() => setView('home')} />}
     </div>
   );

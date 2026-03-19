@@ -1,15 +1,20 @@
+
 import { RoomManager } from './game/RoomManager.js';
 import { GameEngine } from './game/GameEngine.js';
+import { availableOptions } from './data/index.js';
 
 export function registerSocketHandlers(io, socket) {
   console.log(`[connect] ${socket.id}`);
 
+  // Send available game options to the client immediately
+  socket.emit('room:options', availableOptions);
+
   // ── room:create ──────────────────────────────────────────────────────
-  socket.on('room:create', ({ playerName } = {}) => {
+  socket.on('room:create', ({ playerName, options } = {}) => {
     if (!playerName?.trim()) {
       return socket.emit('room:error', { message: 'Player name is required.' });
     }
-    const room = RoomManager.createRoom(socket.id, playerName.trim());
+    const room = RoomManager.createRoom(socket.id, playerName.trim(), options);
     socket.join(room.code);
     socket.emit('room:created', {
       roomCode: room.code,
@@ -17,7 +22,7 @@ export function registerSocketHandlers(io, socket) {
       playerName: playerName.trim(),
       players: room.getPlayerList(),
     });
-    console.log(`[room:create] ${playerName} created room ${room.code}`);
+    console.log(`[room:create] ${playerName} created room ${room.code} with options: ${JSON.stringify(options)}`);
   });
 
   // ── room:join ─────────────────────────────────────────────────────────

@@ -1,11 +1,11 @@
 import { CardDeck } from './CardDeck.js';
-import { blackCards, whiteCards } from '../data/cards.js';
+import { getDeck } from '../data/index.js';
 
 export const HAND_SIZE = 7;
 export const WIN_SCORE = 8;
 
 export class Room {
-  constructor(code, hostId, hostName) {
+  constructor(code, hostId, hostName, options = { lang: 'en', expansions: ['base'] }) {
     this.code = code;
     this.phase = 'lobby'; // lobby | playing | judging | scoring | ended
     this.hostId = hostId;
@@ -16,8 +16,9 @@ export class Room {
     this.submissionOrder = []; // shuffled socketIds for anonymous reveal
     this.roundWinner = null;
 
-    this.blackDeck = new CardDeck(blackCards);
-    this.whiteDeck = new CardDeck(whiteCards);
+    const { black, white } = getDeck(options.lang, options.expansions);
+    this.blackDeck = new CardDeck(black);
+    this.whiteDeck = new CardDeck(white);
 
     this.players = new Map();
     this.addPlayer(hostId, hostName);
