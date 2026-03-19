@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import socket from '../../socket.js';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 
 export default function PlayerHand({ hand, blackCard, hasSubmitted }) {
   const [selected, setSelected] = useState([]);
+  const isMobile = useIsMobile();
 
   const required = blackCard?.pick || 1;
 
@@ -29,6 +31,18 @@ export default function PlayerHand({ hand, blackCard, hasSubmitted }) {
     );
   }
 
+  const cardStyle = isMobile
+    ? { ...styles.whiteCard, width: 'calc(50% - 4px)', minHeight: 160, padding: '12px 10px', fontSize: 13 }
+    : styles.whiteCard;
+
+  const selectedStyle = isMobile
+    ? { ...styles.selected, transform: 'translateY(-4px)', boxShadow: '0 4px 12px rgba(52,152,219,0.4)' }
+    : styles.selected;
+
+  const submitStyle = isMobile
+    ? { ...styles.submitBtn, maxWidth: '100%' }
+    : styles.submitBtn;
+
   return (
     <div style={styles.container}>
       <p style={styles.instruction}>
@@ -44,8 +58,8 @@ export default function PlayerHand({ hand, blackCard, hasSubmitted }) {
               key={card.id}
               onClick={() => toggleCard(card)}
               style={{
-                ...styles.whiteCard,
-                ...(isSelected ? styles.selected : {}),
+                ...cardStyle,
+                ...(isSelected ? selectedStyle : {}),
               }}
             >
               {card.text}
@@ -55,7 +69,7 @@ export default function PlayerHand({ hand, blackCard, hasSubmitted }) {
       </div>
       <button
         style={{
-          ...styles.submitBtn,
+          ...submitStyle,
           opacity: selected.length === required ? 1 : 0.4,
         }}
         disabled={selected.length !== required}
@@ -73,7 +87,7 @@ const styles = {
   hand: {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: 12,
+    gap: 8,
     justifyContent: 'center',
   },
   whiteCard: {

@@ -1,14 +1,35 @@
 import socket from '../../socket.js';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 
 export default function RoundResult({ roundWinner, playerId, hostId, isGameOver, gameWinner }) {
+  const isMobile = useIsMobile();
   const isHost = playerId === hostId;
 
+  const cardStyle = isMobile
+    ? { ...styles.card, padding: '24px 16px', gap: 14, maxWidth: '100%' }
+    : styles.card;
+
+  const titleStyle = isMobile
+    ? { ...styles.title, fontSize: 22 }
+    : styles.title;
+
+  const winnerNameStyle = isMobile
+    ? { ...styles.winnerName, fontSize: 20 }
+    : styles.winnerName;
+
+  const whiteCardStyle = isMobile
+    ? { ...styles.whiteCard, maxWidth: 'calc(50% - 6px)', fontSize: 13, padding: '12px 10px' }
+    : styles.whiteCard;
+
   if (isGameOver) {
+    const subtitleStyle = isMobile
+      ? { ...styles.subtitle, fontSize: 18 }
+      : styles.subtitle;
     return (
       <div style={styles.overlay}>
-        <div style={styles.card}>
-          <h2 style={styles.title}>Game Over!</h2>
-          <p style={styles.subtitle}>{gameWinner?.name} wins the game!</p>
+        <div style={cardStyle}>
+          <h2 style={titleStyle}>Game Over!</h2>
+          <p style={subtitleStyle}>{gameWinner?.name} wins the game!</p>
           {isHost && (
             <button style={styles.btn} onClick={() => window.location.reload()}>
               Play Again
@@ -24,12 +45,12 @@ export default function RoundResult({ roundWinner, playerId, hostId, isGameOver,
 
   return (
     <div style={styles.overlay}>
-      <div style={styles.card}>
-        <h2 style={styles.title}>Round Winner!</h2>
-        <p style={styles.winnerName}>{roundWinner.name}</p>
+      <div style={cardStyle}>
+        <h2 style={titleStyle}>Round Winner!</h2>
+        <p style={winnerNameStyle}>{roundWinner.name}</p>
         <div style={styles.winningCards}>
           {roundWinner.cards?.map((card) => (
-            <div key={card.id} style={styles.whiteCard}>
+            <div key={card.id} style={whiteCardStyle}>
               {card.text}
             </div>
           ))}

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import socket from '../../socket.js';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 
 export default function CreateRoom({ onBack, availableOptions }) {
   const [name, setName] = useState('');
   const [lang, setLang] = useState('en');
   const [expansions, setExpansions] = useState(['base']);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (availableOptions?.languages?.length > 0 && !availableOptions.languages.includes(lang)) {
@@ -27,8 +29,16 @@ export default function CreateRoom({ onBack, availableOptions }) {
 
   const packs = availableOptions?.expansionsByLang?.[lang] || [];
 
+  const cardStyle = isMobile
+    ? { ...styles.card, padding: '24px 16px' }
+    : styles.card;
+
+  const tileStyle = isMobile
+    ? { ...styles.tile, width: 'calc(50% - 4px)' }
+    : styles.tile;
+
   return (
-    <div style={styles.card}>
+    <div style={cardStyle}>
       <h2 style={styles.heading}>Create a Room</h2>
       <form onSubmit={handleCreate} style={styles.form}>
         <div style={styles.field}>
@@ -45,35 +55,55 @@ export default function CreateRoom({ onBack, availableOptions }) {
 
         <div style={styles.field}>
           <label style={styles.label}>Language</label>
-          <select
-            style={styles.input}
-            value={lang}
-            onChange={(e) => {
-              setLang(e.target.value);
-              setExpansions(['base']);
-            }}
-          >
+          <div style={styles.pillGroup}>
             {availableOptions?.languages?.map((l) => (
-              <option key={l} value={l}>
+              <button
+                key={l}
+                type="button"
+                onClick={() => {
+                  setLang(l);
+                  setExpansions(['base']);
+                }}
+                style={{
+                  ...styles.pill,
+                  ...(lang === l ? styles.pillActive : styles.pillInactive),
+                }}
+              >
                 {l.toUpperCase()}
-              </option>
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
         <div style={styles.field}>
           <label style={styles.label}>Expansions</label>
-          <div style={styles.expansionList}>
-            {packs.map((p) => (
-              <label key={p} style={styles.checkboxLabel}>
-                <input
-                  type="checkbox"
-                  checked={expansions.includes(p)}
-                  onChange={() => toggleExpansion(p)}
-                />
-                {p.charAt(0).toUpperCase() + p.slice(1)}
-              </label>
-            ))}
+          <div style={styles.tileGrid}>
+            {packs.map((p) => {
+              const active = expansions.includes(p);
+              return (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => toggleExpansion(p)}
+                  style={{
+                    ...tileStyle,
+                    ...(active ? styles.tileActive : styles.tileInactive),
+                  }}
+                >
+                  <span
+                    style={{
+                      ...styles.tileCheck,
+                      background: active ? '#3498db' : '#333',
+                    }}
+                  >
+                    {active ? '✓' : ''}
+                  </span>
+                  <span style={styles.tileName}>
+                    {p.charAt(0).toUpperCase() + p.slice(1)}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -94,7 +124,7 @@ const styles = {
     padding: 32,
     borderRadius: 8,
     width: '100%',
-    maxWidth: 400,
+    maxWidth: 440,
     display: 'flex',
     flexDirection: 'column',
     gap: 16,
@@ -102,7 +132,7 @@ const styles = {
   heading: { fontSize: 22, fontWeight: 700, color: '#fff' },
   form: { display: 'flex', flexDirection: 'column', gap: 20 },
   field: { display: 'flex', flexDirection: 'column', gap: 8 },
-  label: { fontSize: 14, fontWeight: 600, color: '#aaa', textTransform: 'uppercase' },
+  label: { fontSize: 12, fontWeight: 700, color: '#aaa', textTransform: 'uppercase', letterSpacing: 1 },
   input: {
     padding: '12px 14px',
     fontSize: 16,
@@ -112,24 +142,74 @@ const styles = {
     color: '#fff',
     outline: 'none',
   },
-  expansionList: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 8,
-    maxHeight: 120,
-    overflowY: 'auto',
-    padding: '8px 12px',
-    background: '#111',
-    borderRadius: 4,
-    border: '1px solid #555',
+
+  // Language pill toggles
+  pillGroup: { display: 'flex', flexWrap: 'wrap', gap: 8 },
+  pill: {
+    padding: '8px 20px',
+    borderRadius: 20,
+    fontSize: 14,
+    fontWeight: 700,
+    cursor: 'pointer',
+    letterSpacing: 1,
+    textTransform: 'uppercase',
+    transition: 'background 0.15s, color 0.15s',
   },
-  checkboxLabel: {
+  pillActive: {
+    background: '#3498db',
+    color: '#fff',
+    border: '2px solid #3498db',
+  },
+  pillInactive: {
+    background: 'transparent',
+    color: '#aaa',
+    border: '2px solid #444',
+  },
+
+  // Expansion tile grid
+  tileGrid: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  tile: {
     display: 'flex',
     alignItems: 'center',
-    gap: 10,
-    fontSize: 15,
+    gap: 8,
+    padding: '10px 14px',
+    borderRadius: 8,
     cursor: 'pointer',
+    fontSize: 14,
+    fontWeight: 600,
+    textAlign: 'left',
+    width: '100%',
+    flexGrow: 1,
+    transition: 'background 0.15s, border-color 0.15s',
   },
+  tileActive: {
+    background: 'rgba(52, 152, 219, 0.15)',
+    border: '2px solid #3498db',
+    color: '#fff',
+  },
+  tileInactive: {
+    background: '#111',
+    border: '2px solid #444',
+    color: '#aaa',
+  },
+  tileCheck: {
+    width: 18,
+    height: 18,
+    borderRadius: 4,
+    color: '#fff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 12,
+    fontWeight: 900,
+    flexShrink: 0,
+  },
+  tileName: { flex: 1 },
+
   btn: {
     padding: '12px 0',
     fontSize: 16,

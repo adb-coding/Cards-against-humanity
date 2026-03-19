@@ -1,4 +1,8 @@
+import { useIsMobile } from '../../hooks/useIsMobile.js';
+
 export default function BlackCard({ card }) {
+  const isMobile = useIsMobile();
+
   if (!card) return null;
 
   // Render ___ placeholders as styled blanks
@@ -15,9 +19,17 @@ export default function BlackCard({ card }) {
     return acc;
   }, []);
 
+  const cardStyle = isMobile
+    ? { ...styles.card, width: '100%', maxWidth: 280, minHeight: 200, padding: '20px 16px 16px', flexShrink: 1 }
+    : styles.card;
+
+  const textStyle = isMobile
+    ? { ...styles.text, fontSize: 17 }
+    : styles.text;
+
   return (
-    <div style={styles.card}>
-      <p style={styles.text}>{rendered}</p>
+    <div style={cardStyle}>
+      <p style={textStyle}>{rendered}</p>
       {card.pick > 1 && (
         <p style={styles.pick}>PICK {card.pick}</p>
       )}

@@ -1,6 +1,9 @@
 import socket from '../../socket.js';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 
 export default function SubmittedCards({ submissions }) {
+  const isMobile = useIsMobile();
+
   const handlePick = (submissionId) => {
     socket.emit('game:judgeWinner', { submissionId });
   };
@@ -9,6 +12,10 @@ export default function SubmittedCards({ submissions }) {
     return <p style={{ color: '#aaa', textAlign: 'center' }}>No submissions yet.</p>;
   }
 
+  const cardStyle = isMobile
+    ? { ...styles.submissionCard, width: 'calc(50% - 6px)', minHeight: 160, padding: '12px 10px', fontSize: 13 }
+    : styles.submissionCard;
+
   return (
     <div style={styles.container}>
       <p style={styles.heading}>Pick the funniest answer:</p>
@@ -16,7 +23,7 @@ export default function SubmittedCards({ submissions }) {
         {submissions.map(({ submissionId, cards }) => (
           <button
             key={submissionId}
-            style={styles.submissionCard}
+            style={cardStyle}
             onClick={() => handlePick(submissionId)}
           >
             {cards.map((card) => (

@@ -3,6 +3,7 @@ import PlayerHand from './PlayerHand.jsx';
 import SubmittedCards from './SubmittedCards.jsx';
 import ScoreBoard from './ScoreBoard.jsx';
 import RoundResult from './RoundResult.jsx';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 
 export default function GameScreen({ gameState, onSubmitted }) {
   const {
@@ -23,13 +24,30 @@ export default function GameScreen({ gameState, onSubmitted }) {
     gameWinner,
   } = gameState;
 
+  const isMobile = useIsMobile();
   const isCzar = playerId === czarId;
   const czarPlayer = players.find((p) => p.id === czarId);
+
+  const mainStyle = isMobile
+    ? { ...styles.main, flexDirection: 'column', padding: '12px 8px', gap: 16, alignItems: 'stretch' }
+    : styles.main;
+
+  const sidebarStyle = isMobile
+    ? { ...styles.sidebar, width: '100%' }
+    : styles.sidebar;
+
+  const headerStyle = isMobile
+    ? { ...styles.header, padding: '10px 12px' }
+    : styles.header;
+
+  const previewCardStyle = isMobile
+    ? { ...styles.previewCard, width: 'calc(50% - 6px)' }
+    : styles.previewCard;
 
   return (
     <div style={styles.container}>
       {/* Header */}
-      <div style={styles.header}>
+      <div style={headerStyle}>
         <div style={styles.headerLeft}>
           <span style={styles.roundBadge}>Round {roundNumber}</span>
           <span style={styles.phaseBadge}>{phase.toUpperCase()}</span>
@@ -42,9 +60,9 @@ export default function GameScreen({ gameState, onSubmitted }) {
       </div>
 
       {/* Main area */}
-      <div style={styles.main}>
-        {/* Left: Scoreboard */}
-        <aside style={styles.sidebar}>
+      <div style={mainStyle}>
+        {/* Scoreboard — top on mobile, left sidebar on desktop */}
+        <aside style={sidebarStyle}>
           <ScoreBoard players={players} scores={scores} czarId={czarId} />
         </aside>
 
@@ -81,7 +99,7 @@ export default function GameScreen({ gameState, onSubmitted }) {
                   <p>All cards submitted! Waiting for {czarPlayer?.name} to judge...</p>
                   <div style={styles.submissionsPreview}>
                     {submissions.map(({ submissionId, cards }) => (
-                      <div key={submissionId} style={styles.previewCard}>
+                      <div key={submissionId} style={previewCardStyle}>
                         {cards.map((c) => (
                           <p key={c.id} style={styles.previewText}>{c.text}</p>
                         ))}
