@@ -5,9 +5,13 @@ import cors from 'cors';
 import { registerSocketHandlers } from './socketHandler.js';
 
 const PORT = process.env.PORT || 3001;
+const CLIENT_URL = process.env.CLIENT_URL || '*';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: CLIENT_URL,
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
@@ -15,7 +19,7 @@ app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: '*',
+    origin: CLIENT_URL,
     methods: ['GET', 'POST'],
   },
 });
