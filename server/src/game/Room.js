@@ -88,4 +88,21 @@ export class Room {
     }
     return scores;
   }
+
+  replacePlayerId(oldId, newId) {
+    const player = this.players.get(oldId);
+    if (!player) return null;
+    player.id = newId;
+    this.players.delete(oldId);
+    this.players.set(newId, player);
+    if (this.hostId === oldId) this.hostId = newId;
+    const soIdx = this.submissionOrder.indexOf(oldId);
+    if (soIdx !== -1) this.submissionOrder[soIdx] = newId;
+    if (this.submissions.has(oldId)) {
+      const sub = this.submissions.get(oldId);
+      this.submissions.delete(oldId);
+      this.submissions.set(newId, sub);
+    }
+    return player;
+  }
 }

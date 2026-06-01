@@ -5,7 +5,7 @@ import ScoreBoard from './ScoreBoard.jsx';
 import RoundResult from './RoundResult.jsx';
 import { useIsMobile } from '../../hooks/useIsMobile.js';
 
-export default function GameScreen({ gameState, onSubmitted }) {
+export default function GameScreen({ gameState, onSubmitted, onExit }) {
   const {
     phase,
     playerId,
@@ -59,6 +59,7 @@ export default function GameScreen({ gameState, onSubmitted }) {
           <span style={styles.czarName}>{czarPlayer?.name || '?'}</span>
           {isCzar && <span style={styles.youCzar}>(You!)</span>}
         </div>
+        <button onClick={onExit} style={styles.exitBtn}>← Leave</button>
       </div>
 
       {/* Main area */}
@@ -165,6 +166,16 @@ const styles = {
   czarLabel: { color: '#aaa' },
   czarName: { color: '#e74c3c', fontWeight: 700 },
   youCzar: { color: '#f1c40f', fontSize: 12, fontStyle: 'italic' },
+  exitBtn: {
+    background: 'none',
+    border: '1px solid #555',
+    color: '#aaa',
+    padding: '6px 12px',
+    borderRadius: 4,
+    cursor: 'pointer',
+    fontSize: 13,
+    fontWeight: 600,
+  },
   main: {
     flex: 1,
     display: 'flex',

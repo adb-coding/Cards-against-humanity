@@ -1,6 +1,6 @@
 import socket from '../../socket.js';
 
-export default function WaitingRoom({ gameState }) {
+export default function WaitingRoom({ gameState, onExit }) {
   const { roomCode, playerId, hostId, players } = gameState;
   const isHost = playerId === hostId;
 
@@ -11,7 +11,10 @@ export default function WaitingRoom({ gameState }) {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h2 style={styles.heading}>Waiting Room</h2>
+        <div style={styles.header}>
+          <h2 style={styles.heading}>Waiting Room</h2>
+          <button onClick={onExit} style={styles.exitBtn}>← Leave</button>
+        </div>
 
         <div style={styles.codeBox}>
           <p style={styles.codeLabel}>Room Code</p>
@@ -67,7 +70,18 @@ const styles = {
     flexDirection: 'column',
     gap: 24,
   },
-  heading: { fontSize: 24, fontWeight: 700, color: '#fff', textAlign: 'center' },
+  header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
+  heading: { fontSize: 24, fontWeight: 700, color: '#fff' },
+  exitBtn: {
+    background: 'none',
+    border: '1px solid #555',
+    color: '#aaa',
+    padding: '6px 12px',
+    borderRadius: 4,
+    cursor: 'pointer',
+    fontSize: 13,
+    fontWeight: 600,
+  },
   codeBox: {
     background: '#111',
     borderRadius: 8,

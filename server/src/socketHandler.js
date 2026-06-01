@@ -60,6 +60,90 @@ export function registerSocketHandlers(io, socket) {
     console.log(`[room:join] ${playerName} joined room ${room.code}`);
   });
 
+  // ── room:leave ────────────────────────────────────────────────────────
+  socket.on('room:leave', () => {
+    const room = RoomManager.findRoomByPlayer(socket.id);
+    if (!room) return;
+    const player = room.getPlayer(socket.id);
+    const playerName = player?.name || 'Unknown';
+    room.removePlayer(socket.id);
+    socket.leave(room.code);
+    if (room.players.size === 0) {
+      RoomManager.deleteRoom(room.code);
+      return;
+    }
+    if (room.hostId === socket.id) {
+      room.hostId = room.getOrderedPlayers()[0];
+      io.to(room.code).emit('room:hostChanged', { newHostId: room.hostId });
+    }
+    io.to(room.code).emit('room:playerLeft', {
+      playerId: socket.id,
+      playerName,
+      players: room.getPlayerList(),
+    });
+    console.log(`[room:leave] ${playerName} left room ${room.code}`);
+  });
+
+  // ── room:rejoin ───────────────────────────────────────────────────────
+  socket.on('room:rejoin', ({ roomCode, playerName } = {}) => {
+    const room = RoomManager.getRoom(roomCode);
+    if (!room || room.phase === 'ended') {
+      return socket.emit('room:rejoinFailed');
+    }
+    let existingId = null;
+    for (const [id, p] of room.players) {
+      if (p.name === playerName) { existingId = id; break; }
+    }
+    if (!existingId) return socket.emit('room:rejoinFailed');
+
+    const player = room.replacePlayerId(existingId, socket.id);
+    socket.join(room.code);
+
+    const response = {
+      roomCode: room.code,
+      playerId: socket.id,
+      playerName: player.name,
+      hostId: room.hostId,
+      players: room.getPlayerList(),
+      phase: room.phase,
+    };
+
+    if (room.phase !== 'lobby') {
+      const czarId = room.getCzarId();
+      const nonCzarIds = [...room.players.keys()].filter((id) => id !== czarId);
+      response.round = room.round;
+      response.czarId = czarId;
+      response.blackCard = room.currentBlackCard;
+      response.scores = room.getScores();
+      response.hand = player.hand;
+      response.maxRedraws = room.maxRedraws;
+      response.myRedraws = player.redraws;
+      response.hasSubmitted = room.submissions.has(socket.id);
+      response.submittedCount = room.submissions.size;
+      response.totalNeeded = nonCzarIds.length;
+    }
+
+    if (room.phase === 'judging' || room.phase === 'scoring') {
+      response.submissions = room.submissionOrder.map((pid, index) => ({
+        submissionId: index,
+        cards: room.submissions.get(pid),
+      }));
+    }
+
+    if (room.phase === 'scoring' && room.roundWinner) {
+      const winner = room.getPlayer(room.roundWinner);
+      response.roundWinner = {
+        id: room.roundWinner,
+        name: winner?.name,
+        cards: room.submissions.get(room.roundWinner),
+      };
+    }
+
+    socket.emit('room:rejoined', response);
+    socket.to(room.code).emit('room:playerJoined', { players: room.getPlayerList() });
+    console.log(`[room:rejoin] ${playerName} rejoined room ${roomCode}`);
+  });
+
   // ── game:start ────────────────────────────────────────────────────────
   socket.on('game:start', () => {
     const room = RoomManager.findRoomByPlayer(socket.id);

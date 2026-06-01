@@ -4,31 +4,33 @@ import LobbyScreen from './components/lobby/LobbyScreen.jsx';
 import WaitingRoom from './components/lobby/WaitingRoom.jsx';
 import GameScreen from './components/game/GameScreen.jsx';
 
+const INITIAL_GAME_STATE = {
+  roomCode: null,
+  playerId: null,
+  playerName: null,
+  hostId: null,
+  phase: 'lobby',
+  players: [],
+  czarId: null,
+  currentBlackCard: null,
+  myHand: [],
+  submissions: [],
+  scores: {},
+  roundWinner: null,
+  roundNumber: 0,
+  gameWinner: null,
+  submittedCount: 0,
+  totalNeeded: 0,
+  hasSubmitted: false,
+  maxRedraws: 1,
+  myRedraws: 0,
+  error: null,
+  availableOptions: { languages: [], expansionsByLang: {} },
+};
+
 export default function App() {
   const [screen, setScreen] = useState('lobby'); // lobby | waiting | game
-  const [gameState, setGameState] = useState({
-    roomCode: null,
-    playerId: null,
-    playerName: null,
-    hostId: null,
-    phase: 'lobby',
-    players: [],
-    czarId: null,
-    currentBlackCard: null,
-    myHand: [],
-    submissions: [],
-    scores: {},
-    roundWinner: null,
-    roundNumber: 0,
-    gameWinner: null,
-    submittedCount: 0,
-    totalNeeded: 0,
-    hasSubmitted: false,
-    maxRedraws: 1,
-    myRedraws: 0,
-    error: null,
-    availableOptions: { languages: [], expansionsByLang: {} },
-  });
+  const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
 
   useEffect(() => {
     socket.connect();
@@ -39,6 +41,7 @@ export default function App() {
 
     // ── Room events ──────────────────────────────────────────────────────
     socket.on('room:created', (data) => {
+      sessionStorage.setItem('cah_session', JSON.stringify({ roomCode: data.roomCode, playerName: data.playerName }));
       setGameState((s) => ({
         ...s,
         roomCode: data.roomCode,
@@ -51,6 +54,7 @@ export default function App() {
     });
 
     socket.on('room:joined', (data) => {
+      sessionStorage.setItem('cah_session', JSON.stringify({ roomCode: data.roomCode, playerName: data.playerName }));
       setGameState((s) => ({
         ...s,
         roomCode: data.roomCode,
@@ -60,6 +64,50 @@ export default function App() {
         players: data.players,
       }));
       setScreen('waiting');
+    });
+
+    socket.on('room:rejoined', (data) => {
+      sessionStorage.setItem('cah_session', JSON.stringify({ roomCode: data.roomCode, playerName: data.playerName }));
+      setGameState((s) => ({
+        ...s,
+        roomCode: data.roomCode,
+        playerId: data.playerId,
+        playerName: data.playerName,
+        hostId: data.hostId,
+        players: data.players,
+        phase: data.phase,
+        roundNumber: data.round ?? 0,
+        czarId: data.czarId ?? null,
+        currentBlackCard: data.blackCard ?? null,
+        scores: data.scores ?? {},
+        myHand: data.hand ?? [],
+        maxRedraws: data.maxRedraws ?? 1,
+        myRedraws: data.myRedraws ?? 0,
+        hasSubmitted: data.hasSubmitted ?? false,
+        submittedCount: data.submittedCount ?? 0,
+        totalNeeded: data.totalNeeded ?? 0,
+        submissions: data.submissions ?? [],
+        roundWinner: data.roundWinner ?? null,
+      }));
+      setScreen(data.phase === 'lobby' ? 'waiting' : 'game');
+    });
+
+    socket.on('room:rejoinFailed', () => {
+      sessionStorage.removeItem('cah_session');
+      setScreen('lobby');
+    });
+
+    // Try to rejoin after connecting
+    socket.on('connect', () => {
+      const saved = sessionStorage.getItem('cah_session');
+      if (saved) {
+        try {
+          const { roomCode, playerName } = JSON.parse(saved);
+          socket.emit('room:rejoin', { roomCode, playerName });
+        } catch {
+          sessionStorage.removeItem('cah_session');
+        }
+      }
     });
 
     socket.on('room:playerJoined', ({ players }) => {
@@ -146,6 +194,7 @@ export default function App() {
     });
 
     socket.on('game:ended', ({ scores, winner }) => {
+      sessionStorage.removeItem('cah_session');
       setGameState((s) => ({ ...s, phase: 'ended', scores, gameWinner: winner }));
     });
 
@@ -165,8 +214,11 @@ export default function App() {
     });
 
     return () => {
+      socket.off('connect');
       socket.off('room:created');
       socket.off('room:joined');
+      socket.off('room:rejoined');
+      socket.off('room:rejoinFailed');
       socket.off('room:playerJoined');
       socket.off('room:playerLeft');
       socket.off('room:hostChanged');
@@ -190,6 +242,13 @@ export default function App() {
 
   const markSubmitted = () => setGameState((s) => ({ ...s, hasSubmitted: true }));
 
+  const handleExit = () => {
+    sessionStorage.removeItem('cah_session');
+    socket.emit('room:leave');
+    setGameState((s) => ({ ...INITIAL_GAME_STATE, availableOptions: s.availableOptions }));
+    setScreen('lobby');
+  };
+
   return (
     <div style={{ minHeight: '100vh', background: '#1a1a1a', color: '#fff' }}>
       {gameState.error && (
@@ -199,8 +258,8 @@ export default function App() {
         </div>
       )}
       {screen === 'lobby' && <LobbyScreen availableOptions={gameState.availableOptions} />}
-      {screen === 'waiting' && <WaitingRoom gameState={gameState} />}
-      {screen === 'game' && <GameScreen gameState={gameState} onSubmitted={markSubmitted} />}
+      {screen === 'waiting' && <WaitingRoom gameState={gameState} onExit={handleExit} />}
+      {screen === 'game' && <GameScreen gameState={gameState} onSubmitted={markSubmitted} onExit={handleExit} />}
     </div>
   );
 }
