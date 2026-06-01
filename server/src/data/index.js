@@ -1,10 +1,12 @@
 import * as itBase from './languages/it/base.js'
 import * as enBase from './languages/en/base.js'
+import * as enAbsurd from './languages/en/absurd.js'
 
 
 const allCards = {
   en: {
     base: enBase,
+    absurd: enAbsurd
   },
   it: {
     base: itBase,

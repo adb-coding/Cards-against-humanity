@@ -22,6 +22,8 @@ export default function GameScreen({ gameState, onSubmitted }) {
     roundNumber,
     hasSubmitted,
     gameWinner,
+    maxRedraws,
+    myRedraws,
   } = gameState;
 
   const isMobile = useIsMobile();
@@ -87,6 +89,8 @@ export default function GameScreen({ gameState, onSubmitted }) {
               blackCard={currentBlackCard}
               hasSubmitted={hasSubmitted}
               onSubmitted={onSubmitted}
+              maxRedraws={maxRedraws}
+              myRedraws={myRedraws}
             />
           )}
 

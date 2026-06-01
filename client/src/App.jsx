@@ -24,6 +24,8 @@ export default function App() {
     submittedCount: 0,
     totalNeeded: 0,
     hasSubmitted: false,
+    maxRedraws: 1,
+    myRedraws: 0,
     error: null,
     availableOptions: { languages: [], expansionsByLang: {} },
   });
@@ -91,12 +93,18 @@ export default function App() {
         hasSubmitted: false,
         submittedCount: 0,
         totalNeeded: 0,
+        maxRedraws: data.maxRedraws ?? 1,
+        myRedraws: 0,
       }));
       setScreen('game');
     });
 
     socket.on('game:dealtHand', ({ hand }) => {
       setGameState((s) => ({ ...s, myHand: hand }));
+    });
+
+    socket.on('game:handRedrawn', ({ hand, redraws, maxRedraws }) => {
+      setGameState((s) => ({ ...s, myHand: hand, myRedraws: redraws, maxRedraws }));
     });
 
     socket.on('game:playerSubmitted', ({ submittedCount, totalNeeded }) => {
@@ -165,6 +173,7 @@ export default function App() {
       socket.off('room:error');
       socket.off('game:started');
       socket.off('game:dealtHand');
+      socket.off('game:handRedrawn');
       socket.off('game:playerSubmitted');
       socket.off('game:allSubmitted');
       socket.off('game:submissionsRevealed');

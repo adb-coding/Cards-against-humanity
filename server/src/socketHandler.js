@@ -101,6 +101,17 @@ export function registerSocketHandlers(io, socket) {
     }
   });
 
+  // ── game:redrawHand ───────────────────────────────────────────────────
+  socket.on('game:redrawHand', () => {
+    const room = RoomManager.findRoomByPlayer(socket.id);
+    if (!room) return socket.emit('game:error', { message: 'Room not found.' });
+
+    const result = GameEngine.redrawHand(room, socket.id);
+    if (result.error) return socket.emit('game:error', { message: result.error });
+
+    socket.emit('game:handRedrawn', { hand: result.hand, redraws: result.redraws, maxRedraws: result.maxRedraws });
+  });
+
   // ── game:judgeWinner ──────────────────────────────────────────────────
   socket.on('game:judgeWinner', ({ submissionId } = {}) => {
     const room = RoomManager.findRoomByPlayer(socket.id);

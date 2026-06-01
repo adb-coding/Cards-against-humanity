@@ -26,6 +26,10 @@ export class CardDeck {
     return cards;
   }
 
+  discard(cards) {
+    this.pile.unshift(...cards);
+  }
+
   get remaining() {
     return this.pile.length;
   }

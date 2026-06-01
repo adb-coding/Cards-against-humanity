@@ -15,6 +15,7 @@ export class Room {
     this.submissions = new Map(); // socketId -> WhiteCard[]
     this.submissionOrder = []; // shuffled socketIds for anonymous reveal
     this.roundWinner = null;
+    this.maxRedraws = options.maxRedraws ?? 1;
 
     const { black, white } = getDeck(options.lang, options.expansions);
     this.blackDeck = new CardDeck(black);
@@ -31,6 +32,7 @@ export class Room {
       hand: [],
       score: 0,
       isConnected: true,
+      redraws: 0,
     });
   }
 

@@ -1,4 +1,4 @@
-import { WIN_SCORE } from './Room.js';
+import { WIN_SCORE, HAND_SIZE } from './Room.js';
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -34,6 +34,7 @@ export const GameEngine = {
       blackCard: room.currentBlackCard,
       players: room.getPlayerList(),
       scores: room.getScores(),
+      maxRedraws: room.maxRedraws,
     };
   },
 
@@ -125,6 +126,24 @@ export const GameEngine = {
       scores: room.getScores(),
       gameOver,
     };
+  },
+
+  /**
+   * Redraw entire hand for a player.
+   */
+  redrawHand(room, playerId) {
+    if (room.phase !== 'playing') return { error: 'Not in playing phase.' };
+    if (playerId === room.getCzarId()) return { error: 'Card Czar cannot redraw.' };
+
+    const player = room.getPlayer(playerId);
+    if (!player) return { error: 'Player not found.' };
+    if (player.redraws >= room.maxRedraws) return { error: 'No redraws remaining.' };
+
+    room.whiteDeck.discard(player.hand);
+    player.hand = room.whiteDeck.drawMany(HAND_SIZE);
+    player.redraws += 1;
+
+    return { hand: player.hand, redraws: player.redraws, maxRedraws: room.maxRedraws };
   },
 
   /**

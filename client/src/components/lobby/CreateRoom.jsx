@@ -6,6 +6,7 @@ export default function CreateRoom({ onBack, availableOptions }) {
   const [name, setName] = useState('');
   const [lang, setLang] = useState('en');
   const [expansions, setExpansions] = useState(['base']);
+  const [maxRedraws, setMaxRedraws] = useState(1);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function CreateRoom({ onBack, availableOptions }) {
     if (!name.trim()) return;
     socket.emit('room:create', {
       playerName: name.trim(),
-      options: { lang, expansions },
+      options: { lang, expansions, maxRedraws },
     });
   };
 
@@ -107,6 +108,28 @@ export default function CreateRoom({ onBack, availableOptions }) {
           </div>
         </div>
 
+        <div style={styles.field}>
+          <label style={styles.label}>Hand Redraws Per Player</label>
+          <div style={styles.pillGroup}>
+            {[0, 1, 2, 3].map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => setMaxRedraws(n)}
+                style={{
+                  ...styles.pill,
+                  ...(maxRedraws === n ? styles.pillActive : styles.pillInactive),
+                }}
+              >
+                {n === 0 ? 'Off' : n}
+              </button>
+            ))}
+          </div>
+          <span style={styles.fieldHint}>
+            Times each player can swap their entire hand
+          </span>
+        </div>
+
         <button style={styles.btn} type="submit" disabled={!name.trim() || expansions.length === 0}>
           Create
         </button>
@@ -133,6 +156,7 @@ const styles = {
   form: { display: 'flex', flexDirection: 'column', gap: 20 },
   field: { display: 'flex', flexDirection: 'column', gap: 8 },
   label: { fontSize: 12, fontWeight: 700, color: '#aaa', textTransform: 'uppercase', letterSpacing: 1 },
+  fieldHint: { fontSize: 11, color: '#666', marginTop: 2 },
   input: {
     padding: '12px 14px',
     fontSize: 16,
