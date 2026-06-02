@@ -1,6 +1,8 @@
 import * as itBase from './languages/it/base.js'
 import * as enBase from './languages/en/base.js'
 import * as enAbsurd from './languages/en/absurd.js'
+import * as itAbsurd from './languages/it/absurd.js'
+import * as itEverything from './languages/it/everything.js'
 
 
 const allCards = {
@@ -10,6 +12,8 @@ const allCards = {
   },
   it: {
     base: itBase,
+    absurd: itAbsurd,
+    everything: itEverything
   },
 };
 

@@ -6,7 +6,7 @@ export default function RoundResult({ roundWinner, playerId, hostId, isGameOver,
   const isHost = playerId === hostId;
 
   const cardStyle = isMobile
-    ? { ...styles.card, padding: '24px 16px', gap: 14, maxWidth: '100%' }
+    ? { ...styles.card, padding: '24px 16px', gap: 14, maxWidth: '100%', boxSizing: 'border-box', width: '100%' }
     : styles.card;
 
   const titleStyle = isMobile
@@ -18,7 +18,7 @@ export default function RoundResult({ roundWinner, playerId, hostId, isGameOver,
     : styles.winnerName;
 
   const whiteCardStyle = isMobile
-    ? { ...styles.whiteCard, maxWidth: 'calc(50% - 6px)', fontSize: 13, padding: '12px 10px' }
+    ? { ...styles.whiteCard, maxWidth: 'calc(50% - 6px)', fontSize: 13, padding: '12px 10px', wordBreak: 'break-word', overflowWrap: 'break-word', boxSizing: 'border-box' }
     : styles.whiteCard;
 
   if (isGameOver) {
@@ -93,7 +93,7 @@ const styles = {
   title: { fontSize: 28, fontWeight: 900, color: '#f1c40f' },
   subtitle: { fontSize: 22, fontWeight: 700, color: '#fff' },
   winnerName: { fontSize: 26, fontWeight: 900, color: '#2ecc71' },
-  winningCards: { display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' },
+  winningCards: { display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center', width: '100%' },
   whiteCard: {
     background: '#fff',
     color: '#000',
@@ -103,6 +103,9 @@ const styles = {
     fontWeight: 600,
     maxWidth: 200,
     lineHeight: 1.4,
+    wordBreak: 'break-word',
+    overflowWrap: 'break-word',
+    boxSizing: 'border-box',
   },
   btn: {
     padding: '14px 32px',
