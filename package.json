@@ -1,17 +1,22 @@
 {
-  "name": "cards-against-humanity",
-  "version": "1.0.0",
+  "name": "table-night",
   "private": true,
   "workspaces": [
-    "client",
-    "server"
+    "launcher",
+    "server",
+    "Cards-against-humanity/client",
+    "Cards-against-humanity/server",
+    "SH/shared",
+    "SH/client",
+    "SH/server"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
-    "build": "npm run build --workspace=client",
-    "start": "npm run start --workspace=server"
+    "dev": "concurrently -n server,menu,cah,sh -c yellow,magenta,white,red \"npm run dev -w server\" \"npm run dev -w launcher\" \"npm run dev -w cah-client\" \"npm run dev -w sh-client\"",
+    "build": "npm run build -w launcher && npm run build -w cah-client && npm run build -w sh-client && node scripts/assemble.mjs",
+    "start": "npm run start -w server"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
   }
 }

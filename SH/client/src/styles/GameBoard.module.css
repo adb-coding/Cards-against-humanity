@@ -1,0 +1,275 @@
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  padding-top: calc(var(--topbar-h) + var(--safe-top));
+  padding-bottom: calc(1.5rem + var(--safe-bottom));
+}
+
+/* ── Top bar ─────────────────────────────────────────── */
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120; /* above phase modals, so "check my role" stays reachable while voting */
+  height: calc(var(--topbar-h) + var(--safe-top));
+  padding: var(--safe-top) 64px 0 10px; /* right side leaves room for the help button */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: rgba(31, 29, 27, 0.94);
+  border-bottom: 1px solid rgba(212, 196, 156, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.25rem 0.6rem 0.25rem 0.25rem;
+  border: 1px solid rgba(212, 196, 156, 0.35);
+  border-radius: 999px;
+  background: rgba(244, 228, 188, 0.06);
+  color: var(--color-parchment);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+
+.identity:disabled {
+  cursor: default;
+}
+
+.identity:not(:disabled):hover {
+  background: rgba(244, 228, 188, 0.14);
+}
+
+.identityAvatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 228, 188, 0.15);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+}
+
+.identityAvatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.identityText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.15;
+}
+
+.identityName {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.identityHint {
+  font-size: 0.72rem;
+  color: var(--color-muted-light);
+}
+
+.youTag {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 0.2rem 0.35rem 0.15rem;
+  border-radius: 3px;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+.roomCode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  color: var(--color-parchment);
+  flex-shrink: 0;
+}
+
+.roomCode span {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--color-muted-light);
+}
+
+/* ── Layout ──────────────────────────────────────────── */
+.layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 0.75rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'phase'
+    'boards'
+    'players';
+  gap: 0.9rem;
+}
+
+.phase {
+  grid-area: phase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.boards {
+  grid-area: boards;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.players {
+  grid-area: players;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-weight: normal;
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.sectionTitle span {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: normal;
+  color: var(--color-muted-light);
+}
+
+.deadNotice {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #e07070;
+  border-radius: var(--radius);
+  background: rgba(160, 32, 32, 0.2);
+  color: #f0b0b0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ── Deck / discard / tracker stats ─────────────────── */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  color: var(--color-parchment-dark);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stat b {
+  color: var(--color-parchment);
+}
+
+.statImg {
+  height: 26px;
+  width: auto;
+  border-radius: 2px;
+}
+
+.trackerDots {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.dot,
+.dotOn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-liberal-light);
+}
+
+.dotOn {
+  background: var(--color-liberal-light);
+}
+
+.vetoChip {
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 999px;
+  color: var(--color-gold);
+}
+
+/* ── Waiting state ──────────────────────────────────── */
+.waiting {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.waitingImg {
+  width: min(70vw, 280px);
+  height: auto;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    transform: scale(1.03);
+    opacity: 0.85;
+  }
+}
+
+/* ── Wider screens: boards left, players right ──────── */
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    grid-template-areas:
+      'phase phase'
+      'boards players';
+    padding: 1rem 1.25rem 0;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .players {
+    position: sticky;
+    top: calc(var(--topbar-h) + 1rem);
+  }
+}

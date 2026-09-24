@@ -1,0 +1,26 @@
+# One Netlify site serves the menu at "/" and each game under its own base path.
+# The realtime backend (server/) is a long-lived Socket.IO process and must run
+# on a Node host (Render, Railway, Fly.io...). Point the clients at it with
+# VITE_SERVER_URL in the Netlify environment variables.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/cah/*"
+  to = "/cah/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sh/*"
+  to = "/sh/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

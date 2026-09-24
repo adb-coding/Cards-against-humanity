@@ -1,0 +1,1914 @@
+{
+  "blackCards": [
+    {
+      "id": "b_001",
+      "text": "Ain't it nifty? Barb and Bob hit 50! So get off your ass and raise a glass to 50 years of ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_002",
+      "text": "Duuuuuuude. You have got to go to space. ______ is awesome in space.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_003",
+      "text": "\"Five,",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_004",
+      "text": "For hunting in the King's forest, I hereby sentence you to death by ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_005",
+      "text": "Give me ten good men and 48 hours. I'll get you ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_006",
+      "text": "\"Goldfinger!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_007",
+      "text": "Goodbye, ______, hello _____!",
+      "pick": 2,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_008",
+      "text": "Here's a little something I learned in business school: The customer is always ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_009",
+      "text": "\"Hey, honey.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_010",
+      "text": "I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have is a very particular set of skills. Skills like _____.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_011",
+      "text": "\"I hate this job.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_012",
+      "text": "\"I have solved politics.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_013",
+      "text": "I so drunk I ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_014",
+      "text": "I swear to God I'm gonna murder my husband if he doesn't shut the fuck up about ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_015",
+      "text": "In bookstores now: \"From ______ to ______: A memoir.\"",
+      "pick": 2,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_016",
+      "text": "In Radiohead's new single, Thom Yorke repeats the phrase \"______\" dozens of times over a skittering drum beat.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_017",
+      "text": "It's finally happening! I'm finally doing it! Yes! It's time for ______!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_018",
+      "text": "It's late at night. You're in bed with your lover, Patrick Stewart. He leans over with a twinkle in his eye and asks \"How about ______?\"",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_019",
+      "text": "\"It's the 21st century.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_020",
+      "text": "Ladies and gentlemen, I propose a two-pronged plan. The first prong will be ______, and the second prong will be ______.",
+      "pick": 2,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_021",
+      "text": "Live from Universal Studios, it's America's favorite game show! \"______ or ______?\"",
+      "pick": 2,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_022",
+      "text": "Millions of copies sold! Donald Trump's \"The Art of _______.\"",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_023",
+      "text": "New at TGI Fridays! It's what you've been waiting for: The ______ Burger.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_024",
+      "text": "\"Oh no!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_025",
+      "text": "Oh you haaaaaaave to see this new documentary on Netflix. I don't want to give anything away, but let's just say it will change the way you look at ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_026",
+      "text": "Oh, the weather outside is frightful. But ______ is so delightful.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_027",
+      "text": "One, two, three and to the four, Snoop Doggy Dogg and Dr. Dre is ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_028",
+      "text": "Personal foul: ______. 15-yard penalty. Automatic first down.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_029",
+      "text": "Rub a dub dub, ______ in a tub!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_030",
+      "text": "Say it loud! I'm ______ and I'm proud!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_031",
+      "text": "Seriously guys, there's nothing funny about ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_032",
+      "text": "Sweetheart, you and your sister excel in different ways. She's got her violin, and you've got ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_033",
+      "text": "That's bullshit! They can't fire me for _______!",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_034",
+      "text": "The sequel is here! Get ready for ______ 2: ______.",
+      "pick": 2,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_035",
+      "text": "This ain't no rodeo, kid. Mama knows her way around ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_036",
+      "text": "That was the worst sex I ever had. It was like twenty minutes of ______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_037",
+      "text": "Times have changed, girlfriend. If you want to meet people in New York, you got to be down for _______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_038",
+      "text": "Unfortunately, no one can be told what ______ is. You have to experience it for yourself.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_039",
+      "text": "What has my life become? I'm jerking off to a video called \"co-ed absolutely destroyed by ______.\"",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_040",
+      "text": "What sounds great after four margaritas?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_041",
+      "text": "What's hot, smelly, and about to die?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_042",
+      "text": "What's secretly a Russian plot to destabilize the West?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_043",
+      "text": "\"What's up, YouTube?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_044",
+      "text": "Why did the chicken cross the road?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_045",
+      "text": "Why my mustache smell so bad?",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_046",
+      "text": "\"Yeah that's so hot.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_047",
+      "text": "You can call me David Copperfield, because I'm about to make ______ disappear.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "b_048",
+      "text": "You city folk would never understand the quiet dignity of _______.",
+      "pick": 1,
+      "pack": "absurd",
+      "lang": "en"
+    }
+  ],
+  "whiteCards": [
+    {
+      "id": "w_001",
+      "text": "...it is unclear.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_002",
+      "text": "A 12-foot scepter of bone.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_003",
+      "text": "A basketball that screams every time it gets bounced.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_004",
+      "text": "A bear.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_005",
+      "text": "A big hole.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_006",
+      "text": "A big hot fire that's burning everybody.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_007",
+      "text": "A big, big, big, and I mean BIG big.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_008",
+      "text": "A big, sloppy blowjob from a mean, tired cowboy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_009",
+      "text": "A bird that dies.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_010",
+      "text": "A bold red lip.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_011",
+      "text": "A button that when you press it, there's jazz.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_012",
+      "text": "A cat with… hands.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_013",
+      "text": "A Christmas feast of goose and jellies.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_014",
+      "text": "A concerning amount of white people.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_015",
+      "text": "A couple of cold ones.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_016",
+      "text": "A crab rangoon.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_017",
+      "text": "A family of raccoons.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_018",
+      "text": "A four-hour depression nap.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_019",
+      "text": "A full-on panic attack.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_020",
+      "text": "A garbage clown who makes no one laugh and should die.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_021",
+      "text": "A hamburger on a string that keeps getting pulled away.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_022",
+      "text": "A hateful 30-year marriage.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_023",
+      "text": "A little boy with big dreams and potatoes for hands.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_024",
+      "text": "A little girl with a knife.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_025",
+      "text": "A little sewer girl strangling a pigeon.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_026",
+      "text": "A little taste of penis.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_027",
+      "text": "A magician fucking up over and over again.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_028",
+      "text": "A penis that gets too hard and explodes blood.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_029",
+      "text": "A piping-hot casserole filled with beans and hair.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_030",
+      "text": "A poop emergency.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_031",
+      "text": "A powerful philosopher named Brainhead.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_032",
+      "text": "A Pringle.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_033",
+      "text": "A Puerto Rican minotaur from the Bronx.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_034",
+      "text": "A racist boomerang that only comes back if you're white.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_035",
+      "text": "A real cum-dumpster of a saxophonist.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_036",
+      "text": "A real job with insurance and your taxes taken out and everything.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_037",
+      "text": "A sticky tree hole full of pancake sauce.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_038",
+      "text": "A stinky hoo-ha.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_039",
+      "text": "A toothless woman gumming on a peach.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_040",
+      "text": "A urinary tract infection.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_041",
+      "text": "A vagina that beatboxes when it's horny.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_042",
+      "text": "A whole different way of talking called Spanish.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_043",
+      "text": "Accusing a powerful man of sexual assault.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_044",
+      "text": "Acquiring a gun very easily.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_045",
+      "text": "Acting white.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_046",
+      "text": "All manner of horrors.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_047",
+      "text": "All my dead sisters.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_048",
+      "text": "All types of girls, even ugly ones.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_049",
+      "text": "An 800-foot-long pool noodle.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_050",
+      "text": "An ambitious woman who wears pants.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_051",
+      "text": "An elite squad known as the Special Victims Unit.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_052",
+      "text": "Anything Asian.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_053",
+      "text": "As ass like a bag of pool balls.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_054",
+      "text": "Assembling IKEA furniture.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_055",
+      "text": "Beef.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_056",
+      "text": "Being hunted by giant eagles.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_057",
+      "text": "Being inside me.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_058",
+      "text": "Being seen reading Infinite Jest.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_059",
+      "text": "Being shitty to everyone and late for everything.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_060",
+      "text": "Big beefy baseball boys.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_061",
+      "text": "Big Italian women making the spicy sauce.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_062",
+      "text": "Bimpy, the small styrofoam ball we all jack off into.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_063",
+      "text": "Bipolar Disorder.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_064",
+      "text": "Blowing into the penis so that the balls inflate.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_065",
+      "text": "Blue smoke coming out of my anus.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_066",
+      "text": "Canada's worst mangoes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_067",
+      "text": "Carbs.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_068",
+      "text": "Carlos Santana's horrible wailing guitar.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_069",
+      "text": "Certain things, but not others.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_070",
+      "text": "Chinese people.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_071",
+      "text": "Chowder.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_072",
+      "text": "Clearly asking for no cucumbers in my salad, and yet here we are.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_073",
+      "text": "Clippy from Microsoft Office.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_074",
+      "text": "Colluding with Russia.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_075",
+      "text": "Corn.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_076",
+      "text": "Country music legend Toby Keith.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_077",
+      "text": "Crunchy snacks for my big, flappy mouth.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_078",
+      "text": "Cultural appropriation.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_079",
+      "text": "Curly fries so good you quit ISIS.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_080",
+      "text": "Dating a Republican.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_081",
+      "text": "Death.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_082",
+      "text": "Déjà vu.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_083",
+      "text": "Déjà vu.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_084",
+      "text": "Denying climate change.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_085",
+      "text": "Doing ho shit.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_086",
+      "text": "Doing it doggy, no kissing.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_087",
+      "text": "Doing stuff bad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_088",
+      "text": "Drake.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_089",
+      "text": "Driving to a Walmart parking lot and staring into the distance for eight hours.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_090",
+      "text": "Eating pussy bad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_091",
+      "text": "Ejaculating a quart of hollandaise sauce.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_092",
+      "text": "Elon Musk.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_093",
+      "text": "Enticing a hummingbird to drink nectar out of my urethra.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_094",
+      "text": "Fascism.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_095",
+      "text": "Fat.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_096",
+      "text": "Fingering each other's buttholes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_097",
+      "text": "Foul vegan shits.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_098",
+      "text": "Free two-day shipping with Amazon Prime.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_099",
+      "text": "Fresh Air with Terry Gross.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_100",
+      "text": "Funneling money through a series of shell companies.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_101",
+      "text": "Getting #MeToo'd.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_102",
+      "text": "Getting banished to the Shadow Realm.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_103",
+      "text": "Getting depressed and super fat.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_104",
+      "text": "Getting fisted by a man with no fingers.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_105",
+      "text": "Getting half-hard and trying to smoosh it in.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_106",
+      "text": "Getting herpes from Bruce Willis.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_107",
+      "text": "Getting Mommy another beer.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_108",
+      "text": "Getting tanned, jacked, and juicy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_109",
+      "text": "Going \"oink oink\" like a nasty little pig boy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_110",
+      "text": "Good, clean Christian comedy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_111",
+      "text": "Hard-hitting investigative journalism.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_112",
+      "text": "Having a wonderful time at the zoo.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_113",
+      "text": "Having no legs, just toes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_114",
+      "text": "Having thirty sons named Chad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_115",
+      "text": "Having tuna sandwiches with my favorite honkies.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_116",
+      "text": "Healthcare.gov.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_117",
+      "text": "Hiding from border patrol.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_118",
+      "text": "Hiking up a hillside covered in bear semen yelling \"I'm the queen of the forest!\"",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_119",
+      "text": "Hoopnugget, the game where you throw a nugget into a hoop.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_120",
+      "text": "How many bagels I can fit on my penis.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_121",
+      "text": "How quiet the forest is.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_122",
+      "text": "Huffing and puffing and blowing my stepdad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_123",
+      "text": "Hunting white men for sport.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_124",
+      "text": "Hush money.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_125",
+      "text": "Interrupting women.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_126",
+      "text": "Jeremy and his stupid, annoying, dumb, hard, beautiful body.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_127",
+      "text": "JFK's smiling, exploding head.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_128",
+      "text": "Jörmungandr the World Serpent.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_129",
+      "text": "Joyless, wooden Soviet toys.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_130",
+      "text": "Just a Luna bar for lunch.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_131",
+      "text": "Kanye West but if he were an old Japanese farmer.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_132",
+      "text": "Korean barbecue.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_133",
+      "text": "Leading a country to war on false pretenses.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_134",
+      "text": "Leading children around with a magical flute.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_135",
+      "text": "Letting that pussy breathe.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_136",
+      "text": "Letting this loser eat me out.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_137",
+      "text": "Licking the toilet as Mistress commands.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_138",
+      "text": "Life.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_139",
+      "text": "Little Debbie and her mom, Full-Size Deborah.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_140",
+      "text": "Lotion.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_141",
+      "text": "Loving America.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_142",
+      "text": "Magic: The Gathering.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_143",
+      "text": "Making direct eye contact with a horse's asshole.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_144",
+      "text": "Mark Zuckerberg.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_145",
+      "text": "Masturbating to ISIS beheading videos.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_146",
+      "text": "Maybe getting a little involved in selling heroin sometimes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_147",
+      "text": "Melania Trump.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_148",
+      "text": "Murdering our parents.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_149",
+      "text": "My biological father.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_150",
+      "text": "My buddy Jeff.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_151",
+      "text": "My daughter fucking my boyfriend.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_152",
+      "text": "My math teacher's bulge.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_153",
+      "text": "My real dad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_154",
+      "text": "My secret butt.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_155",
+      "text": "My son's dipshit friends.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_156",
+      "text": "My son's husband's huge cock.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_157",
+      "text": "\"My wife.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_158",
+      "text": "Naked Dad.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_159",
+      "text": "Netflix.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_160",
+      "text": "New DNA evidence exonerating OJ Simpson.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_161",
+      "text": "Nipples the size of CDs.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_162",
+      "text": "None of your damn business.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_163",
+      "text": "Nonsexual activities, such as roller skating.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_164",
+      "text": "Not being a part of my son's life.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_165",
+      "text": "Oral.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_166",
+      "text": "Outdated gender norms.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_167",
+      "text": "Owing a lot of money to some very bad people.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_168",
+      "text": "Panda Express.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_169",
+      "text": "Panic and confusion.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_170",
+      "text": "Pissin' me pants.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_171",
+      "text": "Politics.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_172",
+      "text": "Poppin' that pussy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_173",
+      "text": "Preparing my asshole for sex.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_174",
+      "text": "Pretending golf is fun.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_175",
+      "text": "Prison.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_176",
+      "text": "Pulling a sick, shit-covered raccoon out of the toilet and nursing it back to health.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_177",
+      "text": "Pulling the butt cheeks apart so the fart comes out quieter.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_178",
+      "text": "Pushing my boob up to lick the nipple.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_179",
+      "text": "Putting dirty dishes in the sink and hoping someone else deals with them.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_180",
+      "text": "Quality, affordable menswear.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_181",
+      "text": "Reparations for slavery.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_182",
+      "text": "Representing the entire black community.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_183",
+      "text": "Representing the entire Black community.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_184",
+      "text": "Respecting women.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_185",
+      "text": "Rubbing my clit with a handgun.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_186",
+      "text": "Sandwich.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_187",
+      "text": "Schindler's List.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_188",
+      "text": "Setting boundaries with co-workers.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_189",
+      "text": "Sewing two hamsters together to make a Double Hamster Supreme.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_190",
+      "text": "Shit.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_191",
+      "text": "Shitting perfectly into a hot dog bun.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_192",
+      "text": "Slavery.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_193",
+      "text": "Slaves.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_194",
+      "text": "Slowly releasing a huge fart over the course of two minutes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_195",
+      "text": "Sluts, whores, and bitches.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_196",
+      "text": "Small plates, or tapas if you will.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_197",
+      "text": "Some cracker-ass motherfucker.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_198",
+      "text": "Some light choking.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_199",
+      "text": "Square dancing with other racists.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_200",
+      "text": "Stapling a butterfly to a cow.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_201",
+      "text": "Staying hydrated.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_202",
+      "text": "Sticking my hard rat dick in my girlfriend's wet rat pussy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_203",
+      "text": "Substituting sweet potato fries for $2.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_204",
+      "text": "Sucking the caviar straight out of a fish's pussy.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_205",
+      "text": "Suddenly feeling really sad for 40 years.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_206",
+      "text": "Swordplay.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_207",
+      "text": "Taking a dump.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_208",
+      "text": "Tar.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_209",
+      "text": "The Asshole Destroyer 3000.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_210",
+      "text": "The Audi Sign-and-Drive Sales Event.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_211",
+      "text": "The awesome power of the Lord.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_212",
+      "text": "The beautiful backpacks of JanSport.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_213",
+      "text": "The boy who sucks the farts out of my sweatpants.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_214",
+      "text": "The coming race war.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_215",
+      "text": "The current political climate.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_216",
+      "text": "The cutest fucking shoes I've ever seen.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_217",
+      "text": "The end of all life on Earth.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_218",
+      "text": "The express written consent of the National Basketball Association.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_219",
+      "text": "The fact that time is moving backwards right now and nobody's noticing.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_220",
+      "text": "The harsh reality that all horses are people in horse costumes.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_221",
+      "text": "The incredible Gary, he'll suck your nipples.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_222",
+      "text": "The kind of porn with poop.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_223",
+      "text": "The King of the Jews.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_224",
+      "text": "The little-known fact that Polish people don't dream.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_225",
+      "text": "The man in the basement.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_226",
+      "text": "The man who fucks me and my wife.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_227",
+      "text": "The Moon.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_228",
+      "text": "The NRA.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_229",
+      "text": "The pelican that will one day eat Scarlett Johansson's baby.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_230",
+      "text": "The persecution of Buddhists by the American-backed government of South Vietnam.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_231",
+      "text": "The pleasure of watching my boys wolf down my pot roast and scamper into the woods.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_232",
+      "text": "The rock after which Dwayne Johnson was named.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_233",
+      "text": "The South rising again.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_234",
+      "text": "The wonderful giant spoon known as \"ladle.\"",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_235",
+      "text": "The world's largest baby, weighing over 700 pounds.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_236",
+      "text": "The worm that ate my penis and is now my penis.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_237",
+      "text": "These breasts of mine.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_238",
+      "text": "This boring-ass white bitch from work.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_239",
+      "text": "This kid I found.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_240",
+      "text": "Thoughts and prayers.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_241",
+      "text": "Three men and three hot dogs.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_242",
+      "text": "Throwing a man by his big penis.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_243",
+      "text": "Thrusting and grunting.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_244",
+      "text": "Thumb, the King of the Fingers.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_245",
+      "text": "Tiny, sour kisses from a lemon dwarf.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_246",
+      "text": "Traditional gender roles.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_247",
+      "text": "Travolta.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_248",
+      "text": "Trees with human skin.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_249",
+      "text": "Turning poor people against each other so they don't pay attention to economic inequality.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_250",
+      "text": "Twirling a cane, popping it into my anus, and giving a tip of the top hat.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_251",
+      "text": "Uncles.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_252",
+      "text": "Uncut daddy dick.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_253",
+      "text": "Violating the Geneva Convention.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_254",
+      "text": "Voldemort.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_255",
+      "text": "Voter suppression.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_256",
+      "text": "What looked like a chemical weapons facility but turned out to be a children's hospital.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_257",
+      "text": "Women in positions of power.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_258",
+      "text": "Yo stanky ass.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_259",
+      "text": "Yogurt that moans in pleasure as you eat it.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_260",
+      "text": "Your little booty in them underpants.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_261",
+      "text": "Your mouth.",
+      "pack": "absurd",
+      "lang": "en"
+    },
+    {
+      "id": "w_262",
+      "text": "Yummy yummy yummy yummy rat pussy.",
+      "pack": "absurd",
+      "lang": "en"
+    }
+  ]
+}

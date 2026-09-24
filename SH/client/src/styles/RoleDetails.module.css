@@ -1,0 +1,70 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.roleCard {
+  width: min(52%, 210px);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+}
+
+.partyCard {
+  width: min(34%, 140px);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(4deg);
+}
+
+.summary {
+  font-size: 1.05rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.liberal {
+  color: var(--color-steel-blue-light);
+}
+
+.fascist {
+  color: var(--color-fascist);
+}
+
+.intel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed currentColor;
+}
+
+.intelHeading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.intelNames {
+  color: var(--color-fascist);
+  font-weight: bold;
+  font-size: 1.05rem;
+}

@@ -1,15 +1,18 @@
 {
-  "name": "cah-server",
+  "name": "table-night-server",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "start": "node src/index.js"
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
   },
   "dependencies": {
+    "cah-server": "*",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.7.4"
+    "express": "^5.0.1",
+    "sh-server": "*",
+    "socket.io": "^4.8.1",
+    "tsx": "^4.19.3"
   }
 }

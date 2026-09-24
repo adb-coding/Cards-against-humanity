@@ -1,0 +1,322 @@
+Prompt	A new adventure awaits at Walt Disney's Magical Kingdom of ______!
+Prompt	After phasing out orca shows, SeaWorld is now attracting customers with ______.
+Prompt	Alright, I'm done with ______. It's time for _____.
+Prompt	And now, from WHYY in Philadelphia, it's "______ with Terry Gross."
+Prompt	As a feminist, I cannot support ______.
+Prompt	"Because I could not stop for Death--
+He kindly stopped for me--
+The Carriage held but just Ourselves--
+And ______.
+
+-- Emily Dickinson"
+Prompt	Every Tuesday, I purchase a box of donuts. I sit on the toilet. I eat the donuts. I remember ______, and I cry.
+Prompt	Few remember Beethoven's lesser-known symphony, "Ode to ______."
+Prompt	FIRST LOOK: Nike drops hot new sneakers designed exclusively for ______.
+Prompt	Hey everybody! It's "______ Guy."
+Prompt	Hey, check out my podcast! It's just two regular guys talking about ______.
+Prompt	Holy MOLY! Now THAT'S what I call ______!
+Prompt	How am I, the Card Czar, going to die?
+Prompt	I only saw my father cry twice: once after Mom died, and once after ______.
+Prompt	I'm ______, you're ______, let's party!
+Prompt	I'm Ted Cruz, and I'm proud to endorse ______.
+Prompt	"I'm that bad type
+Make your mama sad type
+Might seduce your dad type
+I'm ______."
+Prompt	Incredible! Biologists have discovered an octopus capable of ______.
+Prompt	It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of ______.
+Prompt	"It's very simple.
+You give me sex.
+I give you ______."
+Prompt	Join our peaceful community. We eat grapes. We live in tents. We enjoy ______, together.
+Prompt	Lord, please guide my baby girl back to you and away from ______. Amen.
+Prompt	Lucky to be ALIVE! Kylie Jenner's TERRIFYING encounter with ______.
+Prompt	"Me: Hey, Randy! What's going on?
+
+Randy: Aw nothing, man. Just ______."
+Prompt	Men like ______.
+Prompt	Mom! Mom! Look at me, Mom! I'm ______!
+Prompt	Momma always said, "Life is like ______. You never know what you're gonna get."
+Prompt	Mr. Musk, as your legal counsel, I must strongly advise against ______.
+Prompt	My favorite rapper is "Lil ______."
+Prompt	My penis is ______.
+Prompt	My vagina is ______.
+Prompt	Now on Disney+! Pirates of the Caribbean: The Curse of ______.
+Prompt	Pssst. You go around back. I'll distract the guards with ______.
+Prompt	Ready or not, here comes ______!
+Prompt	"The first rule of Fight Club is: don't talk about Fight Club.
+The second rule of Fight Club is: don't talk about ______."
+Prompt	The year is 2150. The president is ______.
+Prompt	There is a video circulating the Internet that does not represent who I am. I made a vile mistake in my youth, and I deeply regret it. Please don't watch the ______ video.
+Prompt	Today's technical challenge comes from Paul Hollywood. He would like six identical pastries in the shape of ______.
+Prompt	"Two roads diverged in a yellow wood--
+I chose ______,
+And that has made all the difference."
+Prompt	Up next on Fox News: Are college students being radicalized by ______?
+Prompt	WARNING: ______ may cause ______.
+Prompt	Welcome the jungle! We've got ______.
+Prompt	Welcome to Hidden Creek Water Park. Please remember that we do not allow ______ in the pool.
+Prompt	What's better when clowns are involved?
+Prompt	What's big, sweaty, and fantastic?
+Prompt	What's kind of sad, kind of beautiful, but also kind of funny?
+Prompt	Yo, is _____racist?
+Prompt	You ______, bro!
+Prompt	"You better lose yourself in the music
+The moment you own it, you better never let it go
+You only get one shot, do not miss your chance for ______."
+Prompt	You're on a first date. What's an instant red flag?
+	
+Response	70s bush.
+Response	9/11 but with monkeys.
+Response	A Big Mouth Billy Bass that just screams.
+Response	A bird funeral.
+Response	A bit of a tarantula problem.
+Response	A chode.
+Response	A dangerous new type of onion.
+Response	A dentist named Funboy.
+Response	A fuck swing.
+Response	A geisha who is clearly Ronald McDonald.
+Response	A huge swan that wants to fuck.
+Response	A little boy in a sailor suit.
+Response	A little heroin here and there.
+Response	A meeting that could've been an email.
+Response	A missed period.
+Response	A mule that can say "Walmart."
+Response	A national conversation about race.
+Response	A penis with its own smaller penis.
+Response	A perfectly ordinary object, like a pen.
+Response	"a red wheel barrow
+
+glazed with rain water
+
+beside the white chickens"
+Response	A restraining order.
+Response	A sexually charged game of chess.
+Response	A sexy little bald guy.
+Response	A shirtless Uber driver.
+Response	A skinny, submissive husband.
+Response	A viable third party candidate.
+Response	A VR horse-fucking simulator.
+Response	A ziploc bag of soup.
+Response	Affirmative action.
+Response	Aging terribly.
+Response	All y'all motherfuckers.
+Response	An $80,000 bill from the hospital.
+Response	An arranged marriage.
+Response	An avalanche of ground beef.
+Response	Anxiety-baking a hundred muffins.
+Response	Any kind of sex with anybody.
+Response	Apartheid.
+Response	Arguing.
+Response	Asking for money.
+Response	Asking the dentist for more teeth.
+Response	Asking to see the manager.
+Response	Bad music for stupid people.
+Response	Bad stand-up comedy.
+Response	Bangin' bimbos and boppin' bongos!
+Response	Being 1/16th Native American.
+Response	Being a bad, racist policeman.
+Response	Being a pervert.
+Response	Being acquired by Amazon.
+Response	Being mindful of cyclists.
+Response	Being nervous around white people.
+Response	Being the product of incest.
+Response	Big snake!
+Response	Bitcoin.
+Response	Black Republicans.
+Response	Bleeding through another jumbo tampon.
+Response	Brian, the man who works at the Guitar Center.
+Response	Building systems and coordinating processes.
+Response	Buildings.
+Response	Bush's Baked Beans.
+Response	Buying things to fill the emptiness inside.
+Response	Cashews.
+Response	Chinese pResident Xi Jinping.
+Response	Choking to death on a Werther's Original.
+Response	Couples therapy.
+Response	Crandolph, my sweet egg boy.
+Response	Crankin' my hog in the middle of a Zoom call.
+Response	Crying "Yes, Father!" while getting spanked.
+Response	Deteriorating mental health.
+Response	Diabetes.
+Response	DiGiorno.
+Response	Dissolving my husband's body in acid.
+Response	Divorced billionaire energy.
+Response	Doing nothing about climate change.
+Response	Domestic terrorism.
+Response	Drag queens.
+Response	Eating a huge bowl of pasta like a fat piece of shit.
+Response	Edging.
+Response	Escaping from North Korea.
+Response	Expanding British commercial interests in Nigeria.
+Response	Faking a pregnancy.
+Response	Falling down the stairs.
+Response	Falling in love with a turkey.
+Response	Farting out a little boy's birthday candles.
+Response	Feeding a three-course Italian dinner to a mailbox.
+Response	Figuring out how to stop Black people from voting.
+Response	Fleeing the country.
+Response	Fucking a pregnant clown.
+Response	Fucking me.
+Response	Gathering all the world leaders in one room and showing them my pussy.
+Response	Gay.
+Response	Getting bukkaked by twenty Spider-Men.
+Response	Getting crunched into a ball and slammed through a hoop by LeBron James.
+Response	Getting dick tonight.
+Response	Getting drafted and having to be in the army.
+Response	Getting involved in local politics.
+Response	Getting spayed.
+Response	Getting swole.
+Response	Getting tazed in the balls.
+Response	Getting waterboarded.
+Response	Getting white-girl wasted.
+Response	Giving $5 to Black Lives Matter.
+Response	Glittering my pubes.
+Response	Going to a Maroon 5 concert in 2007.
+Response	Golf.
+Response	Googling "lenny kravitz penis."
+Response	Grandpa jerking it to Betty Boop.
+Response	Hands.
+Response	Having a bad life.
+Response	Having a really cool nickname, like "The Sledgehammer."
+Response	Having a thousand best friends but they're all pigeons.
+Response	Having an affair.
+Response	Having divorced parents.
+Response	Having six weeks left to live.
+Response	Hentai.
+Response	Holding a lantern and saying, "Who goes there?"
+Response	Hootin' and hollerin'.
+Response	Hooves.
+Response	Horny.
+Response	How sad it is that Tom Hanks died of COVID.
+Response	HPV.
+Response	Huge American children.
+Response	I am a goat.
+Response	idk lol
+Response	Impostor Syndrome.
+Response	Inhaling a bird mid-yawn.
+Response	Janky tits that go clankety-clank.
+Response	Killing God.
+Response	Knowing the legal age of consent in all 50 states.
+Response	Laying a Nintendo at the Tomb of the Unknown Soldier.
+Response	Leonardo DiCaprio having sex with a jar of mango salsa.
+Response	Literally fucking the police.
+Response	Livin' la vida loca.
+Response	Looking at an infographic and saying "wow."
+Response	Losing custody of the kids.
+Response	Lowering your standards.
+Response	Lying face-down in wet cement.
+Response	Making friends as an adult.
+Response	Making love atop a windswept mesa as the sun blooms on the horizon.
+Response	Mitch McConnell.
+Response	More cowbell.
+Response	Muh truck.
+Response	My beautiful granddaughter.
+Response	My landlord.
+Response	My man, Horace.
+Response	Namazu, the giant mythical catfish.
+Response	Nelson Mandela.
+Response	Neoliberalism.
+Response	Norwegian mansluts.
+Response	OnlyFans.com
+Response	Organized religion.
+Response	Passing as white.
+Response	Peeeeeeee!
+Response	Permanent brain damage from football.
+Response	Personal growth.
+Response	Playing the cello like a gorilla having a stroke.
+Response	Profiting off the exploited labor of the working class.
+Response	Promoting democracy in the Middle East.
+Response	Pulling Grandpa's pants down and smacking his old butt.
+Response	Punching my dad in the face and stealing his car.
+Response	Putting a bookmark in your pussy to remind where I left off.
+Response	Putting the Pop-Tarts in the toaster like a self-respecting person.
+Response	Quality custom upholstery at unbeatable prices.
+Response	Quitting.
+Response	Receiving anal pleasure at Burger King.
+Response	Referring to a mozzarella stick as a "bad boy."
+Response	Refusing to pay federal or state income taxes.
+Response	Remembering that Donald Trump was the president.
+Response	Renouncing Christ.
+Response	Resonating with the Earth's vibrational energy.
+Response	Returning all money to its rightful owner, Jeff Bezos.
+Response	Ribs, the food that's got BONES!
+Response	Rudy Giuliani.
+Response	Running a marathon because oooooh look at me!
+Response	Running my tongue all the way from your forehead to your asshole in one long, creepy stroke.
+Response	RuPaul.
+Response	Russian propaganda.
+Response	Saudi Crown Prince Mohammed bin Salman.
+Response	Saying "fuck it" and stepping off a cliff.
+Response	Saying grace before sex.
+Response	Sexy stinky werewolf boys.
+Response	Shattered hopes and dreams.
+Response	Shittin' me britches.
+Response	Shitting into a Coinstar machine.
+Response	Shitting out part of a turd, sucking it back in, and shitting it back out over and over so you're basically fucking yourself with your own shit.
+Response	Showing deference to the King of Thailand.
+Response	Slappin' dat pussaaayyyyyy!
+Response	Slut-shaming.
+Response	Smearing feces on the walls.
+Response	Smokin' a joint, eatin' some cat food, and watchin' Law & Order SVU.
+Response	Socialism.
+Response	Some piece-of-shit birdhouse my kid made.
+Response	Some sort of alien lobster handjob contest.
+Response	Spending way too long picking a restaurant.
+Response	Sponsored content.
+Response	Squeezing an egg out of my bird pussy.
+Response	Stabbing a motherfucker in the face.
+Response	Staging a coup.
+Response	Stompin' around, humpin' and dumpin'.
+Response	Sturdy Bulgarian women.
+Response	Sucking period clumps through a boba straw.
+Response	Swallowing an unopened can of beer.
+Response	Taking a nap, and then taking another nap.
+Response	Taking forever to cum.
+Response	Tentacles.
+Response	Testing a picture of my asshole to Ted Cruz.
+Response	The American healthcare system.
+Response	The Annual San Diego Conference of Blowjobs.
+Response	The breakup of Yugoslavia.
+Response	The duck who eats bread out of my ass.
+Response	The Electoral College.
+Response	The Great British Baking Show.
+Response	The guillotine.
+Response	The horrible things that giving birth does to your vagina.
+Response	The joys of motherhood.
+Response	The kind of epic diarrhea that the ancient bards wrote songs about.
+Response	The legacy of slavery.
+Response	The long fingernail guy from The Guiness Book of World Records.
+Response	The official company motto of Starbucks: "To inspire and nurture the human spirit -- one person, one cup, and one neighborhood at a time."
+Response	The pile of triceratops shit from Jurassic Park.
+Response	The profound humanism of Iranian cinema.
+Response	The Satisfyer Pro 2 Air Pulse Clitoris Stimulator.
+Response	The song "Uptown Funk" coming on.
+Response	The Swamp of Unlimited Pleasure.
+Response	The ten largest men from my village.
+Response	The terrible computer virus that put all this porn on my laptop.
+Response	The weird noises mom makes when she's swallowing big veggies.
+Response	The world's ugliest baby.
+Response	Thong crust.
+Response	Threatening legal action.
+Response	Throwing your dad into a dumpster and yelling, "Now I am dad!"
+Response	Thunderous lovemaking.
+Response	Thy anus.
+Response	Titty.
+Response	Toddlers.
+Response	Tongue-fucking them toes.
+Response	Transphobia.
+Response	Two dudes just bumpin' their balls together.
+Response	Unresolved childhood trauma.
+Response	Watching someone fuck my wife.
+Response	Watching you poop.
+Response	Wearing a condom the proper way, around the balls and penis.
+Response	Wearing a MAGA hat.
+Response	Wearing the bicycle helmet during sex.
+Response	What I assume to be semen.
+Response	What the State of New Jersey describes as "public defecation."
+Response	What?
+Response	Whatever Master desires.
+Response	White trash in a kiddie pool.
+Response	Wife-swapping.
+Response	Your father's throbbin' rockin' penis.

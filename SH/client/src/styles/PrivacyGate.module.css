@@ -1,0 +1,63 @@
+.gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.eye {
+  color: var(--color-crimson);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  border: 3px solid var(--color-crimson);
+  padding: 0.05em 0.5em;
+  transform: rotate(-3deg);
+}
+
+.text {
+  max-width: 320px;
+  font-size: 0.98rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 0.5rem;
+}
+
+.confirm,
+.cancel {
+  min-height: 48px;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.confirm {
+  background: var(--color-crimson);
+  border: 2px solid var(--color-crimson);
+  color: var(--color-parchment);
+}
+
+.confirm:hover {
+  background: var(--color-crimson-hover);
+}
+
+.cancel {
+  background: transparent;
+  border: 2px solid currentColor;
+  color: inherit;
+}

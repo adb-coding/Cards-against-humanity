@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#16110d" />
+    <title>Table Night</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎲</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <p class="eyebrow">Game night, in your pocket</p>
+        <h1>Table Night</h1>
+      </header>
+
+      <form id="menu" class="panel" novalidate>
+        <section class="step">
+          <label class="step-label" for="name"><span class="step-num">1</span> Who's playing?</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            maxlength="20"
+            autocomplete="nickname"
+            autocapitalize="words"
+            enterkeyhint="done"
+            required
+          />
+          <p class="hint">This is how other players will see you.</p>
+        </section>
+
+        <section class="step">
+          <p class="step-label" id="game-label"><span class="step-num">2</span> Pick a game</p>
+          <div class="games" role="radiogroup" aria-labelledby="game-label">
+            <label class="game game--cah">
+              <input type="radio" name="game" value="cah" />
+              <span class="game-art" aria-hidden="true">
+                <span class="cah-card cah-card--black">Game night needs more ____.</span>
+                <span class="cah-card cah-card--white">Questionable decisions.</span>
+              </span>
+              <span class="game-info">
+                <span class="game-title">Cards Against Humanity</span>
+                <span class="game-meta">2–10 players · party</span>
+              </span>
+            </label>
+
+            <label class="game game--sh">
+              <input type="radio" name="game" value="sh" />
+              <span class="game-art" aria-hidden="true">
+                <img src="/sh-logo.svg" alt="" />
+              </span>
+              <span class="game-info">
+                <span class="game-title">Secret Hitler</span>
+                <span class="game-meta">5–10 players · social deduction</span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <p id="error" class="error" role="alert" hidden></p>
+
+        <button type="submit" class="play" id="play">Enter the game</button>
+      </form>
+
+      <footer class="foot">Create a room inside the game, then share the code with your table.</footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

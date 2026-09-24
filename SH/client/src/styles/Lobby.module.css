@@ -1,0 +1,107 @@
+.container {
+  text-align: center;
+  padding: calc(4rem + var(--safe-top)) 1rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  margin: auto 0;
+}
+
+.roomCodeLabel {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-parchment-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.3rem;
+}
+
+.roomCode {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 12vw, 3rem);
+  letter-spacing: 0.4em;
+  color: var(--color-crimson);
+  border: 3px solid var(--color-crimson);
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  margin-bottom: 2rem;
+  transform: rotate(-1deg);
+  box-shadow: var(--shadow-sm);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.playerList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.playerCard {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  padding: 0.6em 1em;
+  background: rgba(244, 228, 188, 0.08);
+  border: 1px solid var(--color-parchment-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hostBadge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  border: 1px solid var(--color-crimson);
+  padding: 0.15em 0.5em;
+}
+
+.waiting {
+  font-size: 0.9rem;
+  color: var(--color-parchment-dark);
+  margin-bottom: 1.5rem;
+}
+
+.me {
+  background: rgba(244, 228, 188, 0.16);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.youTag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 0.2rem 0.4rem 0.15rem;
+  border-radius: 3px;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--color-parchment-dark);
+  margin: -1.25rem 0 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}

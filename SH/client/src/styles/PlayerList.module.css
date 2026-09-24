@@ -1,0 +1,174 @@
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 0.6rem;
+  padding: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1.6rem 0.4rem 0.55rem;
+  border: 2px solid rgba(212, 196, 156, 0.35);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--color-parchment);
+  text-align: center;
+  min-width: 0;
+  transition: border-color 0.2s, background 0.2s, opacity 0.2s;
+}
+
+.card.me {
+  background: rgba(244, 228, 188, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(244, 228, 188, 0.35);
+}
+
+.card.president {
+  border-color: var(--color-gold);
+}
+
+.card.chancellor {
+  border-color: var(--color-liberal-light);
+}
+
+.card.dead {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+.voteSlot {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.9rem;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.voteBubble {
+  height: 1.9rem;
+  width: auto;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  animation: pop 0.25s ease-out both;
+}
+
+.votedTag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  animation: pop 0.25s ease-out both;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.avatar {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 228, 188, 0.12);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-parchment-dark);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.dead .name {
+  text-decoration: line-through;
+}
+
+.youTag {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 0.2rem 0.35rem 0.15rem;
+  border-radius: 3px;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 1rem;
+}
+
+.badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.presidentBadge {
+  color: var(--color-gold);
+}
+
+.chancellorBadge {
+  color: var(--color-liberal-light);
+}
+
+.mutedBadge {
+  color: var(--color-muted-light);
+}
+
+.deadBadge {
+  color: #e07070;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voteBubble,
+  .votedTag {
+    animation: none;
+  }
+}

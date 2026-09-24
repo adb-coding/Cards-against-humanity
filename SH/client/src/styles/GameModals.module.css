@@ -1,0 +1,613 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out both;
+}
+
+.backdropTop {
+  z-index: 200;
+}
+
+/* Hides the board completely while secret information is on screen. */
+.backdropOpaque {
+  background: var(--color-charcoal-deep);
+}
+
+.modal {
+  background: var(--color-charcoal);
+  border: 2px solid var(--color-parchment-dark);
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+  max-width: 520px;
+  width: 100%;
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: rise 0.25s ease-out both;
+}
+
+.paperModal {
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.paperModal .title {
+  color: var(--color-ink);
+}
+
+.paperModal .subtitle {
+  color: var(--color-muted);
+}
+
+.paperModal .btnPrimary {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-parchment);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}
+
+.tapHint {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-muted-light);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.youTag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 0.2rem 0.35rem 0.15rem;
+  border-radius: 3px;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  vertical-align: middle;
+}
+
+.passed {
+  color: #8fd18f;
+}
+
+.failed {
+  color: #f08a7a;
+}
+
+.liberalText {
+  color: var(--color-liberal-light);
+}
+
+.fascistText {
+  color: var(--color-fascist);
+}
+
+/* ── Toast for executive actions ─────────────────── */
+.toast {
+  position: fixed;
+  left: 50%;
+  top: calc(var(--topbar-h) + var(--safe-top) + 0.5rem);
+  transform: translateX(-50%);
+  z-index: 150;
+  width: min(92vw, 460px);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-gold);
+  background: rgba(31, 29, 27, 0.97);
+  color: var(--color-parchment);
+  text-align: center;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  animation: toastIn 0.3s ease-out both;
+}
+
+@keyframes toastIn {
+  from {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 0.92rem;
+  color: var(--color-parchment-dark);
+  margin-bottom: 1.25rem;
+}
+
+.policyCards {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.policyBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-parchment);
+  cursor: pointer;
+  width: min(28vw, 120px);
+}
+
+.policyCardImg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: 3px solid transparent;
+}
+
+.policyBtn:hover .policyCardImg,
+.policyBtn:focus-visible .policyCardImg {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  outline-color: var(--color-cream);
+}
+
+.policyBtn:active .policyCardImg {
+  transform: scale(0.97);
+}
+
+.policyAction {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.8rem 0.1rem;
+  border: 1px solid var(--color-parchment-dark);
+  border-radius: 999px;
+}
+
+.policyCardStatic {
+  width: min(26vw, 110px);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.dropIn {
+  animation: dropIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-40px) scale(1.2) rotate(-6deg);
+    opacity: 0;
+  }
+}
+
+.btnRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btnJa, .btnNein {
+  padding: 0.75rem 2rem;
+  border: 2px solid;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btnJa {
+  background: rgba(46, 94, 46, 0.3);
+  border-color: var(--color-success);
+  color: #7cba7c;
+}
+
+.btnJa:hover {
+  background: rgba(46, 94, 46, 0.5);
+  transform: scale(1.05);
+}
+
+.btnNein {
+  background: rgba(160, 32, 32, 0.3);
+  border-color: var(--color-error);
+  color: #e07070;
+}
+
+.btnNein:hover {
+  background: rgba(160, 32, 32, 0.5);
+  transform: scale(1.05);
+}
+
+.voteCards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.voteCardBtn {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: min(40vw, 190px);
+}
+
+.voteCard {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+  transition: transform 0.2s, opacity 0.2s, outline-color 0.2s, box-shadow 0.2s;
+}
+
+.voteCardBtn:hover .voteCard:not(.voteCardDimmed) {
+  transform: translateY(-4px);
+}
+
+.voteCardSelected {
+  outline-color: var(--color-cream);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px rgba(250, 243, 224, 0.45);
+}
+
+.voteCardDimmed {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--color-steel-blue);
+  border-radius: var(--radius);
+  background: rgba(26, 74, 110, 0.3);
+  color: var(--color-parchment);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: rgba(26, 74, 110, 0.5);
+}
+
+.btnWide {
+  width: 100%;
+  max-width: 320px;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.btnSecondary {
+  padding: 0.75rem 2rem;
+  border: 2px solid rgba(245, 240, 225, 0.35);
+  border-radius: var(--radius);
+  background: rgba(245, 240, 225, 0.08);
+  color: var(--color-parchment);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: rgba(245, 240, 225, 0.18);
+}
+
+.gameOverWaiting {
+  margin-top: 1.5rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.btnDanger {
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--color-crimson);
+  border-radius: var(--radius);
+  background: rgba(139, 0, 0, 0.3);
+  color: var(--color-parchment);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnDanger:hover {
+  background: rgba(139, 0, 0, 0.5);
+}
+
+.btnVeto {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #b8860b;
+  border-radius: var(--radius);
+  background: rgba(184, 134, 11, 0.2);
+  color: #d4a017;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnVeto:hover {
+  background: rgba(184, 134, 11, 0.4);
+}
+
+.playerSelectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.playerSelectBtn {
+  min-height: 48px;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--color-parchment-dark);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--color-parchment);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.playerSelectBtn:hover {
+  background: rgba(250, 243, 224, 0.1);
+  border-color: var(--color-cream);
+}
+
+.voteGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 0.75rem 0.5rem;
+  margin: 1rem 0 0;
+}
+
+.voteEntry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  min-width: 0;
+}
+
+.voteBubble {
+  height: 34px;
+  width: auto;
+}
+
+.voteName {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Game over overlay */
+.gameOverModal {
+  max-width: 620px;
+}
+
+.victoryHeader,
+.victoryFooter {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.victoryFooter {
+  margin: 0.25rem 0 0;
+}
+
+.winnerBanner {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.winnerBanner.liberal {
+  color: #6a9fd8;
+}
+
+.winnerBanner.fascist {
+  color: var(--color-crimson);
+}
+
+.roleRevealList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.roleRevealEntry {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  min-width: 0;
+}
+
+.roleRevealIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.roleRevealText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.roleRevealText strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roleRevealEntry.liberal {
+  background: rgba(106, 159, 216, 0.15);
+  border-left: 3px solid #6a9fd8;
+}
+
+.roleRevealEntry.fascist {
+  background: rgba(139, 0, 0, 0.15);
+  border-left: 3px solid var(--color-crimson);
+}
+
+.roleRevealEntry.dead {
+  opacity: 0.55;
+}
+
+.chaosText {
+  color: var(--color-fascist);
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  letter-spacing: 0.1em;
+}
+
+.investigationTeam {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin: 1rem 0;
+}
+
+.investigationTeam.liberal {
+  color: #6a9fd8;
+}
+
+.investigationTeam.fascist {
+  color: var(--color-crimson);
+}
+
+/* Party membership card flip */
+.investigationCards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.cardFlipWrapper {
+  perspective: 900px;
+}
+
+.membershipCard {
+  position: relative;
+  width: min(40vw, 160px);
+  aspect-ratio: 500 / 713;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.membershipCardFlipped {
+  transform: rotateY(180deg);
+}
+
+.membershipCardBack,
+.membershipCardFront {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.membershipCardFront {
+  transform: rotateY(180deg);
+}
+
+.membershipCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Phones: modals become bottom sheets ─────────── */
+@media (max-width: 600px) {
+  .backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal {
+    border-radius: 16px 16px 0 0;
+    border-width: 2px 0 0;
+    max-height: calc(100dvh - var(--topbar-h) - var(--safe-top) - 8px);
+    padding: 1.25rem 1rem calc(1.25rem + var(--safe-bottom));
+  }
+
+  .btnRow > button {
+    flex: 1 1 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .modal,
+  .toast,
+  .dropIn {
+    animation: none;
+  }
+}

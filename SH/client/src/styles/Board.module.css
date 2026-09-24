@@ -1,0 +1,48 @@
+.board {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  container-type: inline-size;
+}
+
+.boardImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.policyCard {
+  position: absolute;
+  width: 11.4%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
+  animation: placeCard 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+.tracker {
+  position: absolute;
+  width: 3.4%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes placeCard {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%) scale(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .policyCard {
+    animation: none;
+  }
+}

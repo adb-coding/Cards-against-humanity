@@ -1,0 +1,31 @@
+:root {
+  --color-parchment: #f4e4bc;
+  --color-parchment-dark: #d4c49c;
+  --color-charcoal: #2b2b2b;
+  --color-charcoal-deep: #1f1d1b;
+  --color-crimson: #8b0000;
+  --color-crimson-hover: #a00000;
+  --color-fascist: #e2583e;
+  --color-steel-blue: #1a4a6e;
+  --color-steel-blue-light: #2a6a9e;
+  --color-liberal-light: #6fb8cf;
+  --color-gold: #d4a017;
+  --color-cream: #faf3e0;
+  --color-ink: #1a1a1a;
+  --color-muted: #6b6255;
+  --color-muted-light: #a59a86;
+  --color-success: #2e5e2e;
+  --color-error: #a02020;
+
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Special Elite', cursive;
+
+  --radius: 4px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  --topbar-h: 56px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
