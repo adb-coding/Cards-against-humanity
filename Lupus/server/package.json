@@ -1,0 +1,25 @@
+{
+  "name": "lupus-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "bots": "tsx test/bots.ts"
+  },
+  "dependencies": {
+    "express": "^5.0.1",
+    "lupus-shared": "*",
+    "socket.io": "^4.8.1",
+    "tsx": "^4.19.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "socket.io-client": "^4.8.1"
+  },
+  "exports": {
+    "./socket": "./src/socket.ts"
+  }
+}

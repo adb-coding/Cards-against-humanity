@@ -8,12 +8,16 @@
     "Cards-against-humanity/server",
     "SH/shared",
     "SH/client",
-    "SH/server"
+    "SH/server",
+    "Lupus/shared",
+    "Lupus/client",
+    "Lupus/server"
   ],
   "scripts": {
-    "dev": "concurrently -n server,menu,cah,sh -c yellow,magenta,white,red \"npm run dev -w server\" \"npm run dev -w launcher\" \"npm run dev -w cah-client\" \"npm run dev -w sh-client\"",
-    "build": "npm run build -w launcher && npm run build -w cah-client && npm run build -w sh-client && node scripts/assemble.mjs",
-    "start": "npm run start -w server"
+    "dev": "concurrently -n server,menu,cah,sh,lupus -c yellow,magenta,white,red,green \"npm run dev -w server\" \"npm run dev -w launcher\" \"npm run dev -w cah-client\" \"npm run dev -w sh-client\" \"npm run dev -w lupus-client\"",
+    "build": "npm run build -w launcher && npm run build -w cah-client && npm run build -w sh-client && npm run build -w lupus-client && node scripts/assemble.mjs",
+    "start": "npm run start -w server",
+    "test": "npm run test -w lupus-server"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

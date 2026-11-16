@@ -8,3 +8,8 @@ GEMINI.md
 
 # Secret Hitler reference PDFs (rules, print-and-play); not used by the app
 SH/*.pdf
+
+# Lupus in Tabula source material: rulebook PDF and full-size card art (~4 MB each).
+# The app uses the web-sized copies in Lupus/client/public/assets instead.
+Lupus/assets/*.pdf
+Lupus/assets/cards/*.jpg

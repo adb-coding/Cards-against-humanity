@@ -20,6 +20,11 @@
   to = "/sh/index.html"
   status = 200
 
+[[redirects]]
+  from = "/lupus/*"
+  to = "/lupus/index.html"
+  status = 200
+
 [[headers]]
   for = "/*/assets/*"
   [headers.values]

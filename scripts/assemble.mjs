@@ -1,7 +1,8 @@
-// Collects the three Vite builds into a single `dist/` folder for Netlify:
+// Collects the Vite builds into a single `dist/` folder for Netlify:
 //   dist/        <- launcher (game menu)
 //   dist/cah/    <- Cards Against Humanity client
 //   dist/sh/     <- Secret Hitler client
+//   dist/lupus/  <- Lupus in Tabula client
 import { cpSync, existsSync, rmSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,6 +14,7 @@ const parts = [
   { from: 'launcher/dist', to: '' },
   { from: 'Cards-against-humanity/client/dist', to: 'cah' },
   { from: 'SH/client/dist', to: 'sh' },
+  { from: 'Lupus/client/dist', to: 'lupus' },
 ];
 
 rmSync(out, { recursive: true, force: true });

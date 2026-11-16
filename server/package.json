@@ -11,6 +11,7 @@
     "cah-server": "*",
     "cors": "^2.8.5",
     "express": "^5.0.1",
+    "lupus-server": "*",
     "sh-server": "*",
     "socket.io": "^4.8.1",
     "tsx": "^4.19.3"

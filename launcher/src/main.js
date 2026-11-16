@@ -8,10 +8,14 @@ const GAME_KEY = 'tableNight.lastGame';
 // In production every game lives under its own path on the same site.
 // In dev each game runs its own Vite server (see root package.json "dev").
 const GAME_URLS = import.meta.env.DEV
-  ? { cah: 'http://localhost:5174/cah/', sh: 'http://localhost:5175/sh/' }
-  : { cah: '/cah/', sh: '/sh/' };
+  ? { cah: 'http://localhost:5174/cah/', sh: 'http://localhost:5175/sh/', lupus: 'http://localhost:5176/lupus/' }
+  : { cah: '/cah/', sh: '/sh/', lupus: '/lupus/' };
 
-const GAME_NAMES = { cah: 'Cards Against Humanity', sh: 'Secret Hitler' };
+const GAME_NAMES = { cah: 'Cards Against Humanity', sh: 'Secret Hitler', lupus: 'Lupus in Tabula' };
+
+// Games shown on the menu but not open yet: their card is greyed out and cannot be picked.
+// (Add a "soon" badge to the card's title in index.html when you list a game here.)
+const COMING_SOON = [];
 
 const form = document.getElementById('menu');
 const nameInput = document.getElementById('name');
@@ -50,9 +54,15 @@ function showError(message, focusEl) {
   focusEl?.focus();
 }
 
+for (const input of form.querySelectorAll('input[name="game"]')) {
+  const soon = COMING_SOON.includes(input.value);
+  input.disabled = soon;
+  input.closest('.game').classList.toggle('game--soon', soon);
+}
+
 nameInput.value = load(NAME_KEY) ?? '';
 const lastGame = load(GAME_KEY);
-if (lastGame && GAME_URLS[lastGame]) {
+if (lastGame && GAME_URLS[lastGame] && !COMING_SOON.includes(lastGame)) {
   form.querySelector(`input[name="game"][value="${lastGame}"]`).checked = true;
 }
 refresh();
@@ -68,7 +78,9 @@ form.addEventListener('submit', (e) => {
   const game = selectedGame();
 
   if (!name) return showError('Enter your name first.', nameInput);
-  if (!game) return showError('Pick a game to play.', form.querySelector('input[name="game"]'));
+  if (!game || COMING_SOON.includes(game)) {
+    return showError('Pick a game to play.', form.querySelector('input[name="game"]:not(:disabled)'));
+  }
 
   save(NAME_KEY, name);
   save(GAME_KEY, game);
